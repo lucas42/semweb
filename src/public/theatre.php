@@ -1,5 +1,5 @@
 <?php
-include("../inc/init.php");
+include("../inc/backend.php");
 $backend=new Backend("Projects",true);
 if($backend->extention=="owl")$backend->mimetype="application/rdf+xml";
 
