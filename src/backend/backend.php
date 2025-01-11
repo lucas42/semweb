@@ -9,9 +9,6 @@ class Backend{
 		$pages = explode('/', trim($this->uri, '/'));
 		$this->subpage = (count($pages) > 1)?$pages[1]:null;
 		$this->subsubpage = (count($pages) > 2)?$pages[2]:null;
-		//$this->subpage=substr($this->noext,strrpos($this->noext,"/")+1);
-		//$this->subpage=substr($this->uri,strrpos($this->uri,"/")+1);
-		//if(strpos($this->subpage,"."))$this->subpage=substr($this->subpage,0,strpos($this->subpage,"."));
 		$this->extention=substr($this->uri,strrpos($this->uri,".")+1);
 		$conq="application/xhtml+xml,text/html";
 		$this->rdfavail=$rdfavail;
@@ -92,9 +89,6 @@ class Backend{
 		else print $this->output;
 		exit;
 	}
-	/*function addRawHead($output){
-		$this->rawhead.=$output;
-	}*/
 	function addCanonical($url){
 		$this->links.="\n\t<link rel=\"canonical\" href=\"".htmlspecialchars($url)."\" />";
 	}

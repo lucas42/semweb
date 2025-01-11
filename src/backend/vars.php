@@ -1,7 +1,4 @@
 <?php
-/*$->href="";
-$->title="";
-$->text="";*/
 
 $about->href="";
 $about->title="About Luke";
@@ -24,7 +21,6 @@ $blog->text="Blog";
 $blog->external=true;
 
 
-//$links[]=$;
 $links[]=$about;
 $links[]=$projects;
 $links[]=$music;

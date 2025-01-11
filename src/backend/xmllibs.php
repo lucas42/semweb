@@ -99,9 +99,6 @@ $xmlns->xsd="http://www.w3.org/2001/XMLSchema#";
 $xmlns->participation="http://purl.org/vocab/participation/schema#";
 $xmlns->time="http://www.w3.org/2006/time#";
 $xmlns->omb="http://purl.org/ontomedia/ext/common/being#";
-//$xmlns->skos="http://www.w3.org/2004/02/skos/core#";
-//$xmlns->tags="http://www.holygoat.co.uk/owl/redwood/0.1/tags/";
-//$xmlns->tl="http://purl.org/NET/c4dm/timeline.owl#";
 $xmlns->vs="http://www.w3.org/2003/06/sw-vocab-status/ns#";
 
 function print_rdf_head($rootxmlns) {
