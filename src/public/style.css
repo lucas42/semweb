@@ -77,7 +77,7 @@ header{
 	margin:1em;
 }
 
-#content{
+main, #content{
 	clear:both;
 	padding:1em 2em;
 	margin:0 5%;
