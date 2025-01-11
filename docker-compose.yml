@@ -1,8 +1,9 @@
 version: '3'
 services:
-  semver:
+  semweb:
     build: .
+    container_name: semweb
     ports:
       - "8029:80"
-    image: lucas42/semver
+    image: lucas42/semweb
     restart: always
