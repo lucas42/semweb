@@ -85,59 +85,12 @@ class Backend{
 	}
 	function printit(){
 		header("Content-Type: {$this->mimetype};charset={$this->charset}\n\n");
-		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html")$this->printhtml();
-		else print $this->output;
+		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("header.php");
+		print $this->output;
+		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("footer.php");
 		exit;
 	}
 	function addCanonical($url){
 		$this->links.="\n\t<link rel=\"canonical\" href=\"".htmlspecialchars($url)."\" />";
-	}
-	function printhtml(){
-		$title=htmlspecialchars($this->title);
-		if ($this->mimetype=="application/xhtml+xml")print"<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
-		print"\n<!DOCTYPE html>
-<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">
-<head>
-<title>{$title}</title>
-<link rel=\"stylesheet\" type=\"text/css\" href=\"/style\" />";
-if($this->rdfavail)print "\n<link rel=\"alternate\" type=\"application/rdf+xml\" href=\"{$this->noext}.rdf\" /> ";
-if($this->pdfavail)print "\n<link rel=\"alternate\" type=\"application/pdf\" href=\"{$this->noext}.pdf\" /> ";
-print $this->links;
-print "\n<link rel=\"shortcut icon\" type=\"image/png\" href=\"/img/favicon\" /> ";
-//print $this->rawhead;
-print "\n</head>
-<body>
-	<header><span id=\"me\"><a href=\"/\"><img src=\"/img/logo\" alt=\"Luke 
-Blaney\" /></a></span><span id=\"about\"></span>
-	<nav id=\"mainnav\">
-		<ul>";
-		global $links;
-		foreach($links as $link){
-			if($link->text==$this->navpage)$class=" class=\"currentpage\"";
-			else unset($class);
-			if(!$link->external)$link->href="/".$link->href;
-			print "\n\t\t\t<li{$class}><a href=\"".htmlspecialchars($link->href)."\" title=\"".htmlspecialchars($link->title)."\">".htmlspecialchars($link->text)."</a></li>";
-		}
-		print"
-		</ul>
-	</nav>
-	</header>
-	<div id=\"content\">\n";
-		print $this->output;
-		print"
-		<span id=\"end\" />
-	</div>
-	<footer>
-		<nav><ul>
-			<li><a rel=\"me\" href=\"http://www.facebook.com/lucas42\" title=\"For people who know me\">Facebook</a></li>
-			<li><a rel=\"me\" href=\"http://twitter.com/lucas42\" title=\"For people who want to know me\">Twitter</a></li>
-			<li><a rel=\"me\" href=\"http://www.linkedin.com/in/lukeblaney\" title=\"For people who want to employ me\">LinkedIn</a></li>
-			<li><a rel=\"me\" href=\"https://hachyderm.io/@lucas42\">Mastodon</a></li>
-		</ul></nav>
-	</footer>";
-if($this->pdfavail)print "\n<a href=\"{$this->noext}.pdf\" id=\"also\">This page is also available as a pdf</a>";
-elseif($this->rdfavail)print "\n<a href=\"{$this->noext}.rdf\" id=\"also\">This page is also available as rdf</a>";
-print "\n</body>
-</html>";
 	}
 }
