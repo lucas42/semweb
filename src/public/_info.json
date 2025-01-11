@@ -1,0 +1,6 @@
+{
+  "system": "semweb",
+  "ci": {
+    "circle": "gh/lucas42/semweb"
+  }
+}
