@@ -9,7 +9,7 @@ COPY src/vhost.conf /etc/apache2/sites-available/semweb.lukeblaney.co.uk.conf
 RUN a2enmod rewrite
 RUN a2ensite semweb.lukeblaney.co.uk
 
-COPY src/legacy-php/. ./
+COPY src/. ./
 
 ENV PORT 80
 EXPOSE $PORT
