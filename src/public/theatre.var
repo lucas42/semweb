@@ -1,0 +1,5 @@
+URI: theatre.php/html
+Content-type: text/html; qs=0.8
+
+URI: theatre.php/rdf
+Content-type: application/rdf+xml; qs=0.7

@@ -1,5 +1,4 @@
 <?php
-require_once("conneg.php");
 class Backend{
 	private $output;
 	function __construct($navpage=null,$rdfavail=false,$pdfavail=false) {
@@ -9,13 +8,13 @@ class Backend{
 		$pages = explode('/', trim($this->uri, '/'));
 		$this->subpage = (count($pages) > 1)?$pages[1]:null;
 		$this->subsubpage = (count($pages) > 2)?$pages[2]:null;
-		$this->extention=substr($this->uri,strrpos($this->uri,".")+1);
+		//$type=substr($this->uri,strrpos($this->uri,".")+1);
+		if (empty($type)) $type = substr($_SERVER['PATH_INFO'], 1);
 		$conq="application/xhtml+xml,text/html";
 		$this->rdfavail=$rdfavail;
 		$this->pdfavail=$pdfavail;
 		if($this->rdfavail)$conq="application/rdf+xml, ".$conq;
-		$conneg = new contentNegotiation();
-		switch($this->extention){
+		switch($type){
 			case "xml":
 				$this->mimetype="application/xml";
 			break;
@@ -38,20 +37,11 @@ class Backend{
 				$this->mimetype="application/ajax+xml";
 			break;
 			default:
-
-				// If its IE,  then ignore what it tells us, because it lies.  Just send it html
-				if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) {
-					$this->mimetype = 'text/html';
-					break;
-				}
-				$this->mimetype=trim($conneg->compareQ($conq));
+				$this->mimetype = 'text/html';
 		}
 		$this->charset="UTF-8";
 		$this->title="Luke Blaney";
 		$this->navpage=$navpage;
-		$this->lang=$conneg->compareQ('en,ga', 'language');
-		file_put_contents ('/srv/lukeblaney.co.uk/tmplog', $_SERVER['HTTP_ACCEPT']."|{$this->extention}|{$this->mimetype}\n", FILE_APPEND);
-		file_put_contents ('/srv/lukeblaney.co.uk/tmplang', $_SERVER['HTTP_ACCEPT_LANGUAGE']."|{$this->lang}\n", FILE_APPEND);
 	}
 	function addTitle($title,$hh=1,$url=null,$clear=false){
 		if($clear)$style=" style=\"clear:both\"";

@@ -1,0 +1,5 @@
+URI: audience.php/html
+Content-type: text/html; qs=0.8
+
+URI: audience.php/rdf
+Content-type: application/rdf+xml; qs=0.7
