@@ -1,9 +1,8 @@
 version: '3'
 services:
-  lukeblaney.co.uk:
+  semver:
     build: .
-    container_name: lukeblaney.co.uk
     ports:
-      - "8025:80"
-    image: lucas42/lukeblaney.co.uk
+      - "8029:80"
+    image: lucas42/semver
     restart: always
