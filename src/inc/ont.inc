@@ -5,7 +5,7 @@ include_once("xmllibs.php");
 if($backend->mimetype=="application/rdf+xml"){
 print_rdf_head($rootxmlns);
   
-foreach($backend->data as $typename=>$itemtype){
+foreach($data as $typename=>$itemtype){
 	foreach($itemtype as $name=>$item){
 		if($name=="blank")$name="";
 		$label=htmlspecialchars($name);
@@ -48,7 +48,7 @@ foreach($backend->data as $typename=>$itemtype){
 }
 print_rdf_foot();
 }
-foreach($backend->data as $typename=>$itemtype){
+foreach($data as $typename=>$itemtype){
 	foreach($itemtype as $name=>$item){
 		if($name=="blank")continue;
 		$class = "schemabox";
