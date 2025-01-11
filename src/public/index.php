@@ -1,5 +1,5 @@
 <?php
-include("../backend/init.php");
+include("../inc/init.php");
 $backend=new Backend("Projects");
 
 $backend->addTitle("The Semantic Web");

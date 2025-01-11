@@ -1,5 +1,5 @@
 <?php
-include_once("../backend/init.php");
+include_once("init.php");
 include_once("xmllibs.php");
 
 if($backend->mimetype=="application/rdf+xml"){

@@ -1,5 +1,5 @@
 <?php
-include("../backend/init.php");
+include("../inc/init.php");
 $backend=new Backend("Projects",true);
 if($backend->extention=="owl")$backend->mimetype="application/rdf+xml";
 
@@ -162,5 +162,5 @@ if($backend->mimetype!="application/rdf+xml"){
 	$backend->addOutput("<img src=\"theatre-schema\" alt=\"\" class=\"blockimg\"/>");
 }
 $rootxmlns="http://purl.org/theatre#";
-include('../backend/ont.inc');
+include('../inc/ont.inc');
 
