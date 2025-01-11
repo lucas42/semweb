@@ -1,0 +1,371 @@
+body{
+	margin:0;
+	background:#eee;
+	padding-bottom:3em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+a{
+	font-weight:bold;
+	color:inherit;
+	text-decoration:none;
+	color:#400;
+}
+a:hover{
+	text-decoration:underline;
+}
+a img{
+	border:none;
+}
+/*a img:hover{
+	border-color: #400;
+}*/
+code{
+	white-space:pre;
+}
+nav li{
+	list-style-type:none;
+	display:inline;
+	padding:0 2em;
+}
+#mainnav ul{
+	border-top:solid;
+	clear:both;
+	margin:0;
+	height:1.3em;
+	text-transform:uppercase;
+}
+#mainnav a{
+	color:#fff;
+	font-weight:normal;
+}
+#mainnav li{
+	height:1.2em;
+	padding-bottom:0.2em;
+}
+#mainnav .currentpage {
+	background:#fff;
+}
+#mainnav .currentpage a{
+	color:#400;
+}
+header{
+	float:left;
+	width:90%;
+	margin:0 5%;
+	padding-top:1em;
+	background:#400;
+	color:#fff;
+}
+#me{
+	font-size:3em;
+	font-family:helvetica, serif;
+	display:block;
+	float:left;
+	vertical-align:middle;
+	padding:0.25em 0.75em;
+}
+#me a{
+	text-decoration:none;
+	font-weight:normal;
+	color:#fff;
+}
+#me img{
+	height:1em;
+}
+#about{
+	float:right;
+	width:17em;
+	margin:1em;
+}
+
+#content{
+	clear:both;
+	padding:1em 2em;
+	margin:0 5%;
+	background:#fff;
+	background: rgba(255, 255, 255, 0.7);
+}
+h1{
+	margin-top:0;
+}
+h1,h2,h3,h4,h5{
+	color:#400;
+}
+body > footer{
+	padding:0;
+	margin:0 5%;
+	display:block;
+	background:#fff;
+	float:left;
+	width:90%;
+	font-size:0.8em;
+}
+footer li{
+	float:left;
+}
+footer ul{
+	border-top: solid #400;
+	margin:0;
+}
+.label{
+	font-weight:bold;
+}
+#project{
+	margin:1em;
+}
+.homepage a, .source a, .download a{
+	font-weight:normal;
+}
+.projectpic{
+	float:right;
+	max-height:15em;
+	margin-left:1em;
+	clear:right;
+	margin-bottom:1em;
+}
+#thumbs a{
+	width:100px;
+}
+.projectthumb{
+	height:100px;
+	width:100px;
+	margin:10px;
+	-webkit-transition: 1s ease-in;
+	-moz-transition: 1s ease-in;
+	-o-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+#footlightsthumb{
+	position:relative;
+	width:150px;
+	left:-15px;
+	margin-left:0;
+	margin-right:-28px;
+	border:none;
+}
+#footlightsthumb{
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+#footlightsthumb:hover{
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s ease-in;
+	-o-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+.defaultthumb{
+	border:none;
+}
+.defaultthumb:hover{
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+#vixensthumb:hover{
+	-webkit-transform: rotateX(180deg);
+}
+#bedlamthumb:hover{
+	-webkit-transform: rotateY(180deg);
+}
+#sdpthumb{
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+#sdpthumb:hover{
+	-webkit-transform: skew(-30deg);
+	-moz-transform: skew(-30deg);
+	transform: skew(-30deg);
+}
+#allfeedsthumb{
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s ease-in;
+	-o-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+#allfeedsthumb:hover{
+	-webkit-transform: rotateY(180deg) rotateZ(90deg);
+	-moz-transform: rotateY(180deg) rotateZ(90deg);
+	transform: rotateY(180deg) rotateZ(90deg);
+}
+#wafflerthumb{
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+#wafflerthumb:hover{
+	-webkit-transform: scale(0.2);
+	-moz-transform: scale(0.2);
+	transform: scale(0.2);
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s ease-in;
+	-o-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+#lucOSthumb{
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+#lucOSthumb:hover{
+	padding-top:51px;
+	margin-bottom:-51px;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	-o-transition: 0.5s ease-in;
+	transition: 0.5s ease-in;
+}
+
+.projsummary{
+	clear:right;
+	padding-top:1em;
+}
+
+.projsummary:not(:target){
+	display:none;
+}
+
+#thumbs{
+	width:250px;
+	float:left;
+}
+/*#thumbs ~ #end:before{
+	content:"Some of my more recent projects, past and present";
+}
+#thumbs ~ #end{
+	margin-top:3em;
+	clear:none;
+}*/
+.projsummary:not(:target) ~ #end:before{
+	content:"Some of my more recent projects, past and present";
+	float:right;
+}
+.projsummary:target ~ #end:before{
+	display:none;
+}
+.navlink{
+	float:right;
+	margin-left:2em;
+}
+figcaption, .caption{
+	display:block;
+	text-align:center;
+	font-size:smaller;
+	font-weight:bold;
+	font-family:monospace;
+}
+#end{
+	clear:both;
+	display:block;
+}
+.imgholder{
+	clear:both;
+	margin-top:1em;
+}
+.imgholder img{
+	max-width:40em;
+}
+.imgholder.smaller img{
+	max-width:20em;
+}
+.left{
+	float:left;
+	margin-right:2em;
+}
+.right{
+	float:right;
+	margin-left:2em;
+}
+#also{
+	font-family:cursive;
+	font-style:italic;
+	font-size:smaller;
+	font-weight:normal;
+	display:block;
+	padding: 0.4em 0 3em 0;
+	width:15%;
+	text-align: center;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	float:right;
+	position:relative;
+	top:-2em;
+	left:0;
+	background: #eee;
+	color: #caa;
+}
+#also:hover{
+	color: #900;
+	text-decoration:none;
+}
+.warning{
+	padding:0 2em;
+	background:#900;
+	color:#fff;
+	font-weight:bold;
+	margin:0.5em 0;
+	display:block;
+}
+
+/*blog css*/
+.post, .blogtitle {
+	margin:0 auto;
+	max-width:35em;
+}
+time{
+	color:#400;
+	font-weight: bold;
+}
+.blogtitle {
+	max-width:17.5em;
+}
+
+/* ontology css */
+.schemabox, #project.schemabox{
+	border:solid thin;
+	margin:1em 0;
+	padding:1em;
+}
+.schemabox h3{
+	margin-top:0;
+}
+.schemabox:target{
+	background:#ff9;
+}
+.term_status{
+	float:right;
+	color: #b00;
+}
+.archaic{
+	opacity: 0.5;
+}
+.examples a{
+	font-weight: normal;
+	color: inherit;
+}
+blockquote{
+	border: thin inset;
+	background: #fcc;
+	background: rgba(255, 200, 200, 0.5);
+	padding:0 0.5em;
+}
+.blockimg {
+	display: block;
+	max-width:100%;
+	margin: 2em auto;
+}
+.sidefig {
+	float: right;
+}
