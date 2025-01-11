@@ -162,5 +162,5 @@ if($backend->mimetype!="application/rdf+xml"){
 	$backend->addOutput("<img src=\"theatre-schema\" alt=\"\" class=\"blockimg\"/>");
 }
 $rootxmlns="http://purl.org/theatre#";
-include('ont.inc');
+include('../backend/ont.inc');
 

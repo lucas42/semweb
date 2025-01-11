@@ -61,7 +61,7 @@ if($backend->mimetype!="application/rdf+xml"){
 	$backend->addOutput("<img src=\"audience-schema\" alt=\"Schema Diagram\" style=\"max-width:100%\"/>");
 }
 $rootxmlns="http://purl.org/audience#";
-include('ont.inc');
+include('../backend/ont.inc');
 /*
 $backend->data->Class->PerformableProject->comment="A Project which intends to evoke a response from an Audience.";
 $backend->data->Class->PerformableProject->subclassof="foaf:Project";
