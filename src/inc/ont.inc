@@ -98,9 +98,9 @@ function linktoitem($name){
 	$url=htmlspecialchars($name);
 	if (strpos($url,":")!==false){
 		$ontology=substr($url,0,strpos($url,":"));
-		if(isset($xmlns->{$ontology})){
+		if(isset($xmlns[$ontology])){
 			$url=substr($url,strrpos($url,":")+1);
-			$url=$xmlns->{$ontology}.$url;
+			$url=$xmlns[$ontology].$url;
 		}
 		else throw new Exception("Can't find namespace '{$ontology}'");
 	}
@@ -112,7 +112,7 @@ function escapeOutput($value){
 	global $xmlns;
 	$value=htmlspecialchars($value);
 	$prefix=substr($value,0,strpos($value,":"));
-	if($prefix){if(isset($xmlns->{$prefix}))$value=$xmlns->{$prefix}.substr(strstr($value,":"),1);}
+	if($prefix){if(isset($xmlns[$prefix]))$value=$xmlns[$prefix].substr(strstr($value,":"),1);}
 	else $value=$rootxmlns.$value;
 	return $value;
 }
