@@ -72,17 +72,6 @@ class Backend{
 	function addText($text,$tag=null){
 		$this->addOutput(htmlspecialchars($text),$tag);
 	}
-	function addWarning($text){
-		$this->addOutput("<div class=\"warning\">");
-		$this->addText($text);
-		$this->addOutput("</div>");
-	}
-	function redirect($url){
-		header("Status: 301 Moved");
-		if(stripos($url,"://")===false)$url="http://".$_SERVER['HTTP_HOST'].$url;
-		header("Location: ".$url);
-		exit;
-	}
 	function printit(){
 		header("Content-Type: {$this->mimetype};charset={$this->charset}\n\n");
 		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("header.php");
