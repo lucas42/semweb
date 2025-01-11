@@ -18,4 +18,3 @@ if (get_magic_quotes_gpc()) {
 
 
 require("backend.php");
-require("vars.php");

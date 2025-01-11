@@ -90,7 +90,4 @@ class Backend{
 		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("footer.php");
 		exit;
 	}
-	function addCanonical($url){
-		$this->links.="\n\t<link rel=\"canonical\" href=\"".htmlspecialchars($url)."\" />";
-	}
 }

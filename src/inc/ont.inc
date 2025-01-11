@@ -48,7 +48,6 @@ foreach($backend->data as $typename=>$itemtype){
 }
 print_rdf_foot();
 }
-if ($rootxmlns) $backend->addCanonical($rootxmlns);
 foreach($backend->data as $typename=>$itemtype){
 	foreach($itemtype as $name=>$item){
 		if($name=="blank")continue;
