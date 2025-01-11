@@ -40,7 +40,7 @@ class Backend{
 				$this->mimetype = 'text/html';
 		}
 		$this->charset="UTF-8";
-		$this->title="Luke Blaney";
+		$this->title="Luke's Semantic Web";
 		$this->navpage=$navpage;
 	}
 	function addTitle($title,$hh=1,$url=null,$clear=false){
@@ -64,6 +64,7 @@ class Backend{
 	}
 	function printit(){
 		header("Content-Type: {$this->mimetype};charset={$this->charset}\n\n");
+		$title = $this->title;
 		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("header.php");
 		print $this->output;
 		if ($this->mimetype=="application/xhtml+xml"||$this->mimetype=="text/html") include("footer.php");
