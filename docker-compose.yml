@@ -4,6 +4,6 @@ services:
     build: .
     container_name: semweb
     ports:
-      - "8029:80"
+      - $PORT:80
     image: lucas42/semweb
     restart: always

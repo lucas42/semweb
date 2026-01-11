@@ -12,6 +12,3 @@ RUN a2ensite semweb.lukeblaney.co.uk
 
 COPY src/inc ./inc
 COPY src/public ./public
-
-ENV PORT 80
-EXPOSE $PORT
