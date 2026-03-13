@@ -1,7 +1,5 @@
 FROM php:8.5-apache
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /srv/semweb.lukeblaney.co.uk
 
 # Use the default production configuration
