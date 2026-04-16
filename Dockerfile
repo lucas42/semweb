@@ -1,4 +1,6 @@
 FROM php:8.5-apache
+ARG VERSION
+ENV VERSION=$VERSION
 
 WORKDIR /srv/semweb.lukeblaney.co.uk
 
