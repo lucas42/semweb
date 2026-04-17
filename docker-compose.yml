@@ -4,7 +4,7 @@ services:
     container_name: semweb
     ports:
       - $PORT:80
-    image: lucas42/semweb
+    image: lucas42/semweb:${VERSION:-latest}
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -sf http://127.0.0.1/"]
