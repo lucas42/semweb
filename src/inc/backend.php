@@ -94,6 +94,7 @@ class Backend
 	{
 		header("Content-Type: {$this->mimetype};charset={$this->charset}\n\n");
 		$title = $this->title;
+		$canonical = getenv('APP_ORIGIN') . $this->noext;
 		if ($this->mimetype == "application/xhtml+xml" || $this->mimetype == "text/html")
 			include("header.php");
 		print $this->output;
