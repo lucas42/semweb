@@ -1,7 +1,7 @@
 <?php
 
 $title = "Luke's Semantic Web";
-$canonical = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+$canonical = getenv('APP_ORIGIN') . '/';
 include("../inc/header.php");
 
 print "<p>I ♥ the Semantic Web.  Here are some ontologies which I've made:<ul>
