@@ -1,5 +1,7 @@
 {
   "system": "semweb",
+  "checks": {},
+  "metrics": {},
   "ci": {
     "circle": "gh/lucas42/semweb"
   }
