@@ -1,4 +1,4 @@
-FROM php:8.5-apache
+FROM php:8.6-apache
 ARG VERSION
 ENV VERSION=$VERSION
 
